@@ -86,7 +86,6 @@ module BestInPlace
 
   private
     def build_value_for(object, field, opts)
-      return "" if object.send(field).blank?
 
       klass = if object.respond_to?(:id)
         "#{object.class}_#{object.id}"
